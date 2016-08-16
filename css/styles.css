@@ -1,0 +1,32 @@
+/* line 1, ../compass/sass/styles.scss */
+.container-fluid {
+  padding: 0px;
+}
+
+/* line 5, ../compass/sass/styles.scss */
+.menu-search {
+  vertical-align: middle;
+}
+/* line 8, ../compass/sass/styles.scss */
+.menu-search .form-group {
+  margin-top: 20px;
+  margin-bottom: 10p;
+}
+
+/* line 14, ../compass/sass/styles.scss */
+.tags-wrapper {
+  margin: 10px;
+}
+/* line 16, ../compass/sass/styles.scss */
+.tags-wrapper .tag {
+  margin: 5px;
+  display: inline;
+}
+
+/* line 22, ../compass/sass/styles.scss */
+.twt-box {
+  width: 20%;
+  height: 200px;
+  display: inline-block;
+  margin: 0px;
+}

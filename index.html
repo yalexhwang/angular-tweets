@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="twtApp">
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+
+	<script type="text/javascript" src="js/tweets.js"></script>
+	<script type="text/javascript" src="js/mainModule.js"></script>
+	<script type="text/javascript" src="js/homeCtrl.js"></script>
+	<!-- <script type="text/javascript" src="js/twtCtrl.js"></script> -->
+
+</head>
+<body ng-controller="homeCtrl">
+	<div class="container-fluid">
+		<div class="col-sm-10 col-sm-offset-1 menu">
+			<div class="col-sm-3 menu-title">
+				<h3>TweetFlows</h3>
+			</div>
+			<div class="col-sm-3 menu-search">
+				<div class="form-group">
+					<input type="text" placeholder="#SearchKeyword" ng-model="searchKeyword">
+					<button type="button" ng-disabled="searchFull; noKeyword" ng-click="addSearchKeyword()">Get Tweets</button>
+				</div>
+			</div>
+			<div class="col-sm-6 menu-tags">
+				<div class="tags-wrapper">
+					<button type="button" class="btn btn-xs tag" ng-repeat="keyword in searchInput" ng-click="removeSearchKeyword($index)">{{keyword}}</button>
+				</div>
+			</div>
+	
+		</div>
+		<div class="row">
+			<div class="main col-sm-12" ng-view>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

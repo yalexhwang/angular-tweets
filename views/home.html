@@ -1,0 +1,9 @@
+THIS IS home.html 
+
+<div class="twt-box" ng-repeat="tweet in tweets track by $index" ng-style="{'background-image': 'url({{tweet.userImg}})', 'background-size': 'cover'}">
+	{{tweet.userName}} //
+	{{tweet.userId}} //
+	{{tweet.userLoc}} //
+	{{tweet.postTime}} //
+	{{tweet.post}}
+</div>
